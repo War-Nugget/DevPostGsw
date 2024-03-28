@@ -1,7 +1,7 @@
 const request = require('supertest');
 const express = require('express');
 const paymentRoutes = require('../../src/api/paymentRoutes.js');
-const paymentService = require('../services/paymentService.test.js');
+const paymentService = require('../../src/services/paymentService.js');
 
 jest.mock('../../src/services/paymentService');
 

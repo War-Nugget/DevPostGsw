@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const paymentService = require('../services/paymentService.mjs');
+const paymentService = require('../services/paymentService.js');
 
-router.post('/process=payment', async (req, res) => {
+router.post('/process-payment', async (req, res) => {
     try {
         const { nonce, amount } = req.body;
         const paymentResult = await paymentService.processPayment(nonce, amount);

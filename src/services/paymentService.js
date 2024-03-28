@@ -1,13 +1,6 @@
 const { paymentsApi } = require('../api/squareClient');
 const crypto = require('crypto');
-const { result } = await paymentsApi.createPayment({
-    sourceId: 'cnon:card-nonce-ok',
-    amountMoney: {
-        amount: 100,
-        currency: 'USD'
-    },
-    idempotencyKey: crypto.randomUUID(),
-});
+
 
 
 async function processPayment(nonce, amount) {
